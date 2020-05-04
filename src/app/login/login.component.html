@@ -6,8 +6,8 @@
 </head>
 
 <div class="sidenav">
-         <div class="login-main-text">
-            <h2>Pariksha<br> Login Page</h2>
+         <div class="login-main-text" style="font-size:x-large;">
+        <p> Online Test Management System  </p>
          </div>
  </div>
       <div class="main">
@@ -56,9 +56,12 @@
                     Login
                   </button>
                   &nbsp;
-                  <!-- <button class="btn btn-danger btn-block" type="reset">
-                    Cancel
-                  </button> -->
+                  <button
+                     class="btn btn-danger btn-block"
+                      type="reset"
+                      routerLink="/register">
+                      SignUp
+                   </button>
                   &nbsp;
                   <br />
                   <div *ngIf="invalidLogin">

@@ -35,4 +35,9 @@ export class CustomerService {
       responseType: "text" as "json",
     });
   }
+  public SignUp(user: Login) {
+    return this.http.post("http://localhost:1130/SignUp", user, {
+      responseType: "text" as "json",
+    });
+  }
 }
