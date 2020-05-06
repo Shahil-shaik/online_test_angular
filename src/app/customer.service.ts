@@ -11,6 +11,7 @@ import { Login } from "./login";
 export class CustomerService {
   public userId: number;
   public password: string;
+  public testId : number;
   constructor(private http: HttpClient) {}
 
   public loginValidate(userId: number, password: string) {
@@ -39,5 +40,11 @@ export class CustomerService {
     return this.http.post("http://localhost:1130/SignUp", user, {
       responseType: "text" as "json",
     });
+  }
+
+  public assignTest(userId :number,testId:number) {
+    this.userId=userId;
+    this.testId=testId;
+    return this.http.get("http://localhost:1130/test/assignTest"+userId+"/"+testId);
   }
 }

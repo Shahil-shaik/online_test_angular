@@ -64,9 +64,9 @@
                    </button>
                   &nbsp;
                   <br />
-                  <div *ngIf="invalidLogin">
+                  <div *ngIf="errorFlag">
                     <div class="text-danger">
-                      Invalid UserName or Password
+                      {{message}}
                     </div>
                   </div>
                 </form>

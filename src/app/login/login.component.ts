@@ -23,7 +23,8 @@ export class LoginComponent implements OnInit {
   invalidLogin = false;
 
   submitted: boolean = false;
-
+  message : any;
+  errorFlag : boolean;
   constructor(
     public customerservice: CustomerService,
     private router: Router,
@@ -50,7 +51,12 @@ export class LoginComponent implements OnInit {
           } else {
             this.invalidLogin = true;
           }
-        });
+        },
+        (error) =>{
+          this.message=error.error;
+          this.errorFlag=true;
+        }
+        );
     } else {
       return;
     }

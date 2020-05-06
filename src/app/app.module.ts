@@ -11,8 +11,9 @@ import { CustomerService } from "./customer.service";
 import { AdminComponent } from "./admin/admin.component";
 import { UserComponent } from "./user/user.component";
 import { RegisterComponent } from './register/register.component';
+import { AssignTestComponent } from './assign-test/assign-test.component';
 @NgModule({
-  declarations: [AppComponent, AdminComponent, LoginComponent, UserComponent, RegisterComponent],
+  declarations: [AppComponent, AdminComponent, LoginComponent, UserComponent, RegisterComponent, AssignTestComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
